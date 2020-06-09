@@ -1,0 +1,27 @@
+<template>
+
+    <lightning-card>
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-12">
+                <lightning-avatar size="large" src="https://www.lightningdesignsystem.com/assets/images/avatar2.jpg"
+                    initials="CR" fallback-icon-name="standard:person_account" alternative-text="Cindy Rice"
+                    class="slds-m-right_small"></lightning-avatar>
+            </div>
+            <div class="slds-col slds-size_9-of-12" style="text-align: left; padding-left: 10px;">
+                <div class="slds-text-heading_small">{name}</div>
+                <div class="slds-text-title_caps">{industry}</div>
+                <div class="slds-text-title_caps">{phone}</div>
+            </div>
+            <div class="slds-col slds-size_2-of-12">
+                <div class="slds-p-around_medium lgc-bg">                    
+                    <lightning-button-menu alternative-text="Show menu">
+                        <lightning-menu-item value="MenuItemEdit" label="Edit" onclick={editClickHandler}></lightning-menu-item>
+                        <lightning-menu-item value="MenuItemDelete" label="Delete" onclick={deleteClickHandler}></lightning-menu-item>                        
+                    </lightning-button-menu>
+                </div>
+            </div>
+        </div>
+
+    </lightning-card>
+
+</template>

@@ -1,0 +1,46 @@
+<template>
+    <lightning-card title="HelloWorld" icon-name="custom:custom14">
+        <div class="slds-m-around_medium">
+            <p>Hello, {greeting}!</p>
+            <lightning-input label="Name" value={greeting} onchange={changeHandler}></lightning-input>
+            <br />
+            <lightning-button variant="brand" label="Click Me" title="Click Me" onclick={handleClick}
+                class="slds-m-left_x-small"></lightning-button>
+        </div>
+    </lightning-card>
+
+    <br />
+
+    <lightning-card title="Account Details" icon-name="custom:custom63">
+
+        <lightning-input type="search" style="width: 90%; padding-left: 10px;" onkeyup={handleKeyChange}
+            class="slds-m-bottom_small" label="Search" value={searchKey}></lightning-input>
+
+        <div class="slds-m-around_medium">
+            <template if:true={filteredAccounts.data}>
+                <template for:each={filteredAccounts.data} for:item="acc">
+                    <!--<p key={acc.Id}>{acc.Name}</p>-->
+                    <c-data-table-row key={acc.Id} record-id={acc.Id} icon-url={acc.Id} name={acc.Name}
+                        industry={acc.Industry} phone={acc.Phone}></c-data-table-row>
+
+                </template>
+            </template>
+
+        </div>
+    </lightning-card>
+
+
+    <lightning-record-edit-form record-id="0012v00002JobrKAAR" object-api-name="Account">
+        <lightning-messages>
+        </lightning-messages>
+        <lightning-output-field field-name="Name">
+        </lightning-output-field>
+        <lightning-input-field field-name="Industry">
+        </lightning-input-field>
+        <lightning-input-field field-name="Phone">
+        </lightning-input-field>
+        <lightning-button class="slds-m-top_small" variant="brand" type="submit" name="update" label="Update">
+        </lightning-button>
+    </lightning-record-edit-form>
+
+</template>
