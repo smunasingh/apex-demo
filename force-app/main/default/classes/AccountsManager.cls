@@ -1,3 +1,4 @@
+//Class comment added
 public with sharing class AccountsManager {
     
     @AuraEnabled(cacheable=true)
@@ -7,7 +8,7 @@ public with sharing class AccountsManager {
 
          return [SELECT id,Name FROM Account];
 
-
+        
     }
 
     @AuraEnabled(cacheable=true)
