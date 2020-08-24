@@ -1,1 +1,1 @@
-Test.cls
+Test.cls,Test2.cls
