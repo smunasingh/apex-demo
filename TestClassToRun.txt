@@ -1,1 +1,1 @@
-Test.cls,12345
+Test.cls,12345,Test2.cls
