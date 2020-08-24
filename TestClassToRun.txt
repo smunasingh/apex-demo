@@ -1,1 +1,1 @@
-Test.cls,12345,Test2.cls
+Test.cls,12345,Test2.cls,AccountsManagerTest.cls
