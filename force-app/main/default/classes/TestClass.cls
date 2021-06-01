@@ -1,5 +1,5 @@
 public with sharing class TestClass {
-    
+
     public TestClass() {
 
 
@@ -10,9 +10,9 @@ public with sharing class TestClass {
 
          return [SELECT id,Name FROM Account];
 
-        //System.debug('Accounts : '+accountsList);
+        System.debug('Accounts : '+accountsList);
 
     }
 
-    
+
 }
