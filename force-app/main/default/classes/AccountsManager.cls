@@ -1,5 +1,5 @@
 public with sharing class AccountsManager {
-    
+
     @AuraEnabled(cacheable=true)
     public static List<Account> getAllAccounts(){
 
@@ -15,7 +15,8 @@ public with sharing class AccountsManager {
 
         String accNameStr = '%'+searchParam+'%';
         return [SELECT id, Name, Phone, Industry FROM Account WHERE Name LIKE :accNameStr];
-        
+        //comment
+
     }
 
 }
